@@ -1,6 +1,6 @@
 openapi: 3.1.0
 info:
-  title: AskUp Search Plugin API
+  title: AskUp Search API
   description: A retrieval API for querying and filtering documents based on natural language queries and metadata
   version: 1.0.0
 servers:
