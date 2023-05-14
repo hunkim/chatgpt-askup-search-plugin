@@ -1,0 +1,121 @@
+openapi: 3.1.0
+info:
+  title: AskUp Search Plugin API
+  description: A retrieval API for querying and filtering documents based on natural language queries and metadata
+  version: 1.0.0
+servers:
+  - url: https://askup-plugin.sung.devstage.ai
+paths:
+  /search/web:
+    get:
+      summary: Web search
+      operationId: search_web_get
+      parameters:
+        - name: query
+          in: query
+          required: true
+          schema:
+            type: string
+          description: Search query.
+      responses:
+        '200':
+          description: Web search results relayed from Naver.
+          content:
+            application/json:
+              schema:
+                type: object
+
+  /search/blog:
+    get:
+      summary: Blog search
+      operationId: search_blog_get
+      parameters:
+        - name: query
+          in: query
+          required: true
+          schema:
+            type: string
+          description: Search query.
+      responses:
+        '200':
+          description: Blog search results relayed from Naver.
+          content:
+            application/json:
+              schema:
+                type: object
+
+  /search/movie:
+    get:
+      summary: Movie search
+      operationId: search_movie_get
+      parameters:
+        - name: query
+          in: query
+          required: true
+          schema:
+            type: string
+          description: Search query.
+      responses:
+        '200':
+          description: Movie search results relayed from Naver.
+          content:
+            application/json:
+              schema:
+                type: object
+
+  /search/news:
+    get:
+      summary: News search
+      operationId: search_news_get
+      parameters:
+        - name: query
+          in: query
+          required: true
+          schema:
+            type: string
+          description: Search query.
+      responses:
+        '200':
+          description: News search results relayed from Naver.
+          content:
+            application/json:
+              schema:
+                type: object
+
+  /search/local:
+    get:
+      summary: Local search
+      operationId: search_local_get
+      parameters:
+        - name: query
+          in: query
+          required: true
+          schema:
+            type: string
+          description: Search query.
+      responses:
+        '200':
+          description: Local search results relayed from Naver.
+          content:
+            application/json:
+              schema:
+                type: object
+
+  /search/book:
+    get:
+      summary: Book search
+      operationId: search_book_get
+      parameters:
+        - name: query
+          in: query
+          required: true
+          schema:
+            type: string
+          description: Search query.
+      responses:
+        '200':
+          description: Book search results relayed from Naver.
+          content:
+            application/json:
+              schema:
+                type: object

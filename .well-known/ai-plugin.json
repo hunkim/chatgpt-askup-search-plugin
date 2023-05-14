@@ -1,0 +1,18 @@
+{
+    "schema_version": "v1",
+    "name_for_model": "retrieval",
+    "name_for_human": "AskUp Search Plugin",
+    "description_for_model": "Plugin for searching through recent news, web, book, movies, blogs, local information, etc. The results will be json. Please is this to find answers to questions and retrieve relevant information. Use it whenever a user asks something about recent information.",
+    "description_for_human": "Search through your documents.",
+    "auth": {
+      "type": "none"
+    },
+    "api": {
+      "type": "openapi",
+      "url": "https://askup-plugin.sung.devstage.ai/.well-known/openapi.yaml",
+      "has_user_authentication": false
+    },
+    "logo_url": "https://askup-plugin.sung.devstage.ai/.well-known/askup_logo.png",
+    "contact_email": "hunkim@gmail.com", 
+    "legal_info_url": "https://upstage.ai"
+  }
