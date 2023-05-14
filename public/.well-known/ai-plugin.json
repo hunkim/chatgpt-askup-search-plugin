@@ -10,10 +10,10 @@
     },
     "api": {
       "type": "openapi",
-      "url": "https://hunkim.github.io/chatgpt-askup-search-plugin/.well-known/openapi.yaml",
+      "url": "https://chatgpt-askup-plugin.web.app/.well-known/openapi.yaml",
       "has_user_authentication": false
     },
-    "logo_url": "https://hunkim.github.io/chatgpt-askup-search-plugin/.well-known/askup_logo.png",
+    "logo_url": "https://chatgpt-askup-plugin.web.app/.well-known/askup_logo.png",
     "contact_email": "hunkim@gmail.com", 
     "legal_info_url": "https://upstage.ai"
   }
