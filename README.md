@@ -1,4 +1,11 @@
 # chatgpt-askup-search-plugin
 AskUp Search ChatGPT Plugin
 
-<img width="1902" alt="image" src="https://github.com/hunkim/chatgpt-askup-search-plugin/assets/901975/759d77cb-384d-47c2-97bb-4385142b7f00">
+## Install
+<img alt="image" src="https://github.com/hunkim/chatgpt-askup-search-plugin/assets/901975/25fd7c94-90ed-4a74-92ae-87f6d1bb89f1">
+
+## Enjoy
+<img width="1713" alt="image" src="https://github.com/hunkim/chatgpt-askup-search-plugin/assets/901975/c56cb3e7-433c-4f20-b48e-40ddb9352b13">
+
+## Code and Contributions 
+Feel free to send us PR
