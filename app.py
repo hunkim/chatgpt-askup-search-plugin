@@ -101,3 +101,29 @@ async def search_book(query: str, headers: dict = Depends(get_naver_headers)):
     async with httpx.AsyncClient() as client:
         response = await client.get(API_BASE_URL + "book.json", params={"query": query}, headers=headers)
     return response.json()
+
+
+@app.get("/search/image", response_model=dict, summary="Image search")
+async def search_image(query: str, headers: dict = Depends(get_naver_headers)):
+    """
+    Relay Naver image search results.
+
+    Args:
+        query (str): Search query.
+    """
+    async with httpx.AsyncClient() as client:
+        response = await client.get(API_BASE_URL + "image", params={"query": query}, headers=headers)
+    return response.json()
+
+
+@app.get("/search/shop", response_model=dict, summary="Shop search")
+async def search_shop(query: str, headers: dict = Depends(get_naver_headers)):
+    """
+    Relay Naver shop search results.
+
+    Args:
+        query (str): Search query.
+    """
+    async with httpx.AsyncClient() as client:
+        response = await client.get(API_BASE_URL + "shop.json", params={"query": query}, headers=headers)
+    return response.json()

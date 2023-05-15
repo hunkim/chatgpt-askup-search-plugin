@@ -1,7 +1,7 @@
 openapi: 3.1.0
 info:
   title: AskUp Search API
-  description: A retrieval API for querying and filtering documents based on natural language queries and metadata
+  description: A retrieval API for querying and filtering json results based on keyword based queries
   version: 1.0.0
 servers:
   - url: https://askup-plugin.sung.devstage.ai
@@ -115,6 +115,44 @@ paths:
       responses:
         '200':
           description: Book search results relayed from Naver.
+          content:
+            application/json:
+              schema:
+                type: object
+
+  /search/shop:
+    get:
+      summary: Shop search
+      operationId: search_shop_get
+      parameters:
+        - name: query
+          in: query
+          required: true
+          schema:
+            type: string
+          description: Search query.
+      responses:
+        '200':
+          description: Shop search results relayed from Naver.
+          content:
+            application/json:
+              schema:
+                type: object
+
+  /search/image:
+    get:
+      summary: Image search
+      operationId: search_image_get
+      parameters:
+        - name: query
+          in: query
+          required: true
+          schema:
+            type: string
+          description: Search query.
+      responses:
+        '200':
+          description: Image search results relayed from Naver.
           content:
             application/json:
               schema:
