@@ -24,46 +24,6 @@ async def get_naver_headers():
         "X-Naver-Client-Secret": NAVER_CLIENT_SECRET,
     }
 
-
-@app.get("/search/web", response_model=dict, summary="Web search")
-async def search_web(query: str, headers: dict = Depends(get_naver_headers)):
-    """
-    Relay Naver web search results.
-
-    Args:
-        query (str): Search query.
-    """
-    async with httpx.AsyncClient() as client:
-        response = await client.get(API_BASE_URL + "webkr.json", params={"query": query}, headers=headers)
-    return response.json()
-
-
-@app.get("/search/blog", response_model=dict, summary="Blog search")
-async def search_blog(query: str, headers: dict = Depends(get_naver_headers)):
-    """
-    Relay Naver blog search results.
-
-    Args:
-        query (str): Search query.
-    """
-    async with httpx.AsyncClient() as client:
-        response = await client.get(API_BASE_URL + "blog.json", params={"query": query}, headers=headers)
-    return response.json()
-
-
-@app.get("/search/movie", response_model=dict, summary="Movie search")
-async def search_movie(query: str, headers: dict = Depends(get_naver_headers)):
-    """
-    Relay Naver movie search results.
-
-    Args:
-        query (str): Search query.
-    """
-    async with httpx.AsyncClient() as client:
-        response = await client.get(API_BASE_URL + "movie.json", params={"query": query}, headers=headers)
-    return response.json()
-
-
 @app.get("/search/news", response_model=dict, summary="News search")
 async def search_news(query: str, headers: dict = Depends(get_naver_headers)):
     """
@@ -90,16 +50,16 @@ async def search_local(query: str, headers: dict = Depends(get_naver_headers)):
     return response.json()
 
 
-@app.get("/search/book", response_model=dict, summary="Book search")
-async def search_book(query: str, headers: dict = Depends(get_naver_headers)):
+@app.get("/search/blog", response_model=dict, summary="Blog search")
+async def search_blog(query: str, headers: dict = Depends(get_naver_headers)):
     """
-    Relay Naver book search results.
+    Relay Naver blog search results.
 
     Args:
         query (str): Search query.
     """
     async with httpx.AsyncClient() as client:
-        response = await client.get(API_BASE_URL + "book.json", params={"query": query}, headers=headers)
+        response = await client.get(API_BASE_URL + "blog.json", params={"query": query}, headers=headers)
     return response.json()
 
 
@@ -114,6 +74,48 @@ async def search_image(query: str, headers: dict = Depends(get_naver_headers)):
     async with httpx.AsyncClient() as client:
         response = await client.get(API_BASE_URL + "image", params={"query": query}, headers=headers)
     return response.json()
+
+
+@app.get("/search/movie", response_model=dict, summary="Movie search")
+async def search_movie(query: str, headers: dict = Depends(get_naver_headers)):
+    """
+    Relay Naver movie search results.
+
+    Args:
+        query (str): Search query.
+    """
+    async with httpx.AsyncClient() as client:
+        response = await client.get(API_BASE_URL + "movie.json", params={"query": query}, headers=headers)
+    return response.json()
+
+
+@app.get("/search/web", response_model=dict, summary="Web search")
+async def search_web(query: str, headers: dict = Depends(get_naver_headers)):
+    """
+    Relay Naver web search results.
+
+    Args:
+        query (str): Search query.
+    """
+    async with httpx.AsyncClient() as client:
+        response = await client.get(API_BASE_URL + "webkr.json", params={"query": query}, headers=headers)
+    return response.json()
+
+
+
+@app.get("/search/book", response_model=dict, summary="Book search")
+async def search_book(query: str, headers: dict = Depends(get_naver_headers)):
+    """
+    Relay Naver book search results.
+
+    Args:
+        query (str): Search query.
+    """
+    async with httpx.AsyncClient() as client:
+        response = await client.get(API_BASE_URL + "book.json", params={"query": query}, headers=headers)
+    return response.json()
+
+
 
 
 @app.get("/search/shop", response_model=dict, summary="Shop search")
